@@ -1,0 +1,14 @@
+spring:
+  kafka:
+    #https://docs.spring.io/spring-kafka/docs/2.8.2/reference/html/#overview
+    bootstrap-servers: localhost:9092
+    producer:
+      #https://docs.spring.io/spring-kafka/docs/2.8.2/reference/html/#serdes-mapping-types
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      #https://docs.spring.io/spring-kafka/docs/2.8.2/reference/html/#annotation-properties
+      value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+kafka:
+  firstGroup: group-1
+  secondGroup: group-2
+  testTopic: test
